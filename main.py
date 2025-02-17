@@ -40,7 +40,7 @@ if __name__ == "__main__":
         # scheduler.add_job(id="email_rem", func=check, trigger='cron', hour=11, minute=1)
         # scheduler.add_job(id="checked_users", func=checkedUsers, trigger='interval', seconds=5)
         # scheduler.start()
-        # serve(app, port=80)
+        serve(app, port=80)
         app.run()
     else:
         # scheduler.add_job(id="email_rem", func=check, trigger='cron', hour=11, minute=1)
