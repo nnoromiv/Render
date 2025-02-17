@@ -2,7 +2,7 @@ ADMIN_PASS = '0123456789'
 USER_CONFIRMATION_TOKEN_EXPIRY_DELTA = 2
 
 # Use this URL only for development
-deployment = False
+deployment = True
 
 
 if deployment:
