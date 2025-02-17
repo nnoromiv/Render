@@ -32,16 +32,16 @@ def create_app():
     # File upload setting
     mail.init_app(app)
 
-    if deployment:
-        # ACCESS FROM DEPLOYED VERSION
-        SQLALCHEMY_DATABASE_URI_USER_DB = 'mysql+mysqldb://iacopo:happyagain@127.0.0.1:3306/userdb?charset=utf8mb4'
-        SQLALCHEMY_DATABASE_URI_HAPPY_AGAIN_DB = 'mysql+mysqldb://iacopo:happyagain@127.0.0.1:3306/happyagaindb?charset=utf8mb4'
-    else:
-        # ACCESS FROM LOCAL
-        # SQLALCHEMY_DATABASE_URI_USER_DB = 'sqlite:///userdb.db'
-        # SQLALCHEMY_DATABASE_URI_HAPPY_AGAIN_DB = 'sqlite:///happyagaindb.db'
-        SQLALCHEMY_DATABASE_URI_USER_DB = 'mysql+mysqldb://iacopo:happyagain@cseevito1.essex.ac.uk:3306/userdbdev?charset=utf8mb4'
-        SQLALCHEMY_DATABASE_URI_HAPPY_AGAIN_DB = 'mysql+mysqldb://iacopo:happyagain@cseevito1.essex.ac.uk:3306/happyagaindbdev?charset=utf8mb4'
+    # if deployment:
+    #     # ACCESS FROM DEPLOYED VERSION
+    #     SQLALCHEMY_DATABASE_URI_USER_DB = 'mysql+mysqldb://iacopo:happyagain@127.0.0.1:3306/userdb?charset=utf8mb4'
+    #     SQLALCHEMY_DATABASE_URI_HAPPY_AGAIN_DB = 'mysql+mysqldb://iacopo:happyagain@127.0.0.1:3306/happyagaindb?charset=utf8mb4'
+    # else:
+    # ACCESS FROM LOCAL
+    # SQLALCHEMY_DATABASE_URI_USER_DB = 'sqlite:///userdb.db'
+    # SQLALCHEMY_DATABASE_URI_HAPPY_AGAIN_DB = 'sqlite:///happyagaindb.db'
+    SQLALCHEMY_DATABASE_URI_USER_DB = 'mysql+mysqldb://iacopo:happyagain@cseevito1.essex.ac.uk:3306/userdbdev?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI_HAPPY_AGAIN_DB = 'mysql+mysqldb://iacopo:happyagain@cseevito1.essex.ac.uk:3306/happyagaindbdev?charset=utf8mb4'
 
     app.config['SQLALCHEMY_BINDS'] = {
         'userdb': SQLALCHEMY_DATABASE_URI_USER_DB,
