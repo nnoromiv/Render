@@ -1,0 +1,8 @@
+TRIALS_NUMBER=256
+UNIMODAL='unimodal'
+BIMODAL='bimodal'
+CUE_VALID='valid'
+CUE_INVALID='invalid'
+CUE_NEUTRAL='neutral'
+TARGET_LEFT='left'
+TARGET_RIGHT='right'
